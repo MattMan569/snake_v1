@@ -85,18 +85,22 @@ function game () {
 function keyPressed (event) {
     switch (event.keyCode) {
         case 37: // Left
+            if (xv === 1) return;
             xv = -1;
             yv = 0;
             break;
         case 38: // Up
+            if (yv === 1) return;
             xv = 0;
             yv = -1;
             break;
         case 39: // Right
+            if (xv === -1) return;
             xv = 1;
             yv = 0;
             break;
         case 40: // Down
+            if (yv === -1) return;
             xv = 0;
             yv = 1;
             break;
